@@ -1,0 +1,41 @@
+@import "tailwindcss";
+:root { font-family: Arial, sans-serif; color: #333; background: white; font-synthesis: none; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
+body { margin: 0; font-size: 15px; line-height: 1.75; }
+a { color: #236da2; text-decoration: none; text-underline-offset: 3px; }
+a:hover { text-decoration: underline; }
+a:focus-visible { outline: 2px solid #236da2; outline-offset: 4px; }
+.site-header { border-bottom: 1px solid #eee; }
+.header-inner { max-width: 920px; padding: 22px 28px; margin: auto; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+.wordmark { color: #333; font-size: 18px; }
+nav ul { display: flex; list-style: none; gap: 24px; padding: 0; margin: 0; }
+nav a { color: #666; }
+nav a[aria-current] { color: #236da2; }
+.page { max-width: 920px; margin: auto; padding: 48px 28px; }
+.introduction { display: flex; gap: 36px; align-items: flex-start; margin-bottom: 44px; scroll-margin-top: 24px; }
+.intro-text { flex: 1; min-width: 0; }
+h1 { font-size: 34px; font-weight: 400; line-height: 1.3; margin: 0 0 6px; color: #222; }
+.subtitle { color: #666; }
+p { margin: 0 0 14px; }
+.profile-links { display: flex; gap: 18px; align-items: baseline; flex-wrap: wrap; margin: 16px 0 23px; }
+.contact-list { display: flex; gap: 18px; flex-wrap: wrap; list-style: none; margin: 0; padding: 0; overflow-wrap: anywhere; }
+.contact-list:empty { display: none; }
+.profile-photo { width: 200px; flex-shrink: 0; margin: 7px 0 0; }
+.profile-photo img { width: 100%; height: auto; border-radius: 3px; }
+.section { margin: 0 0 40px; scroll-margin-top: 24px; }
+.site-footer { max-width: 920px; margin: auto; padding: 20px 28px 30px; color: #888; font-size: 12px; border-top: 1px solid #eee; }
+.skip-link { position: absolute; top: -100px; left: 15px; background: white; padding: 10px; }
+.skip-link:focus { top: 10px; }
+@media (max-width: 640px) {
+  .page { padding: 32px 22px; }
+  .header-inner { padding: 18px 22px; }
+  .wordmark { font-size: 16px; }
+  nav ul { gap: 16px; font-size: 14px; }
+  .introduction { flex-direction: column; gap: 18px; }
+  .profile-photo { order: -1; width: 150px; }
+  h1 { font-size: 30px; }
+}
+@media print { .site-header, .skip-link { display: none; } .page { padding: 0; } }
+@media (max-width: 640px) {
+  .header-inner { flex-wrap: wrap; gap: 10px; }
+}
+
