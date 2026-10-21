@@ -3,9 +3,13 @@ import { useState } from 'react';
 import Navigation from './components/Navigation.jsx';
 import { ContactLinks } from './components/ProfileSidebar.jsx';
 
+function assetUrl(path) {
+  return `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`;
+}
+
 function Picture({ src, alt, className = '' }) {
   const [failed, setFailed] = useState(false);
-  return src && !failed ? <img className={className} src={src} alt={alt} onError={() => setFailed(true)} /> : null;
+  return src && !failed ? <img className={className} src={assetUrl(src)} alt={alt} onError={() => setFailed(true)} /> : null;
 }
 
 export default function App() {
@@ -17,7 +21,7 @@ export default function App() {
         <div className="intro-text">
           <h1 id="name-heading">{profile.name}</h1>
           <p className="subtitle">{profile.role} @ {profile.affiliation}</p>
-          <div className="profile-links"><ContactLinks profile={profile} />{profile.cv && <a href={profile.cv}>CV</a>}</div>
+          <div className="profile-links"><ContactLinks profile={profile} />{profile.cv && <a href={assetUrl(profile.cv)}>CV</a>}</div>
           {profile.biography.map(text => <p key={text}>{text}</p>)}
         </div>
         {profile.headshot && <figure className="profile-photo"><Picture src={profile.headshot} alt={`Portrait of ${profile.name}`} /></figure>}
