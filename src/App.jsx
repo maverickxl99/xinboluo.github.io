@@ -29,6 +29,13 @@ export default function App() {
       <section id="research" className="section" aria-label="Research interests">
         <p><strong>Research Interests:</strong> {profile.researchInterests}</p>
       </section>
+      <section id="education" className="section" aria-labelledby="education-heading">
+        <h2 id="education-heading">Education</h2>
+        <div className="education-list">{profile.education.map(item => <article key={item.institution}>
+          <p><strong>{item.degree}, {item.year}</strong></p>
+          <p>{item.institution}</p>
+        </article>)}</div>
+      </section>
     </main>
     <footer className="site-footer">© {new Date().getFullYear()} {profile.name}</footer>
   </>;

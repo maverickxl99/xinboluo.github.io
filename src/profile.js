@@ -13,4 +13,9 @@ export const profile = {
     'My experience spans statistical analysis, machine learning, and AI applications. Previously, I worked on AI browsing and voice agents for healthcare workflows at iClinic AI, as well as natural language processing and time series forecasting in other industry roles.',
   ],
   researchInterests: 'Statistical and machine learning methods for biomedical data; biomedical signal analysis; human–LLM interaction; trust in and evaluation of AI-assisted decision-making; AI for healthcare.',
+  education: [
+    { institution: 'Rice University', degree: 'Master of Electrical and Computer Engineering', year: '2025' },
+    { institution: 'University of Liverpool', degree: 'B.Eng. in Computer Science and Electronic Engineering', year: '2023' },
+    { institution: 'Xi’an Jiaotong-Liverpool University', degree: 'B.Eng. in Computer Science and Technology', year: '2021' },
+  ],
 };
