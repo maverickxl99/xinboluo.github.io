@@ -7,7 +7,7 @@ export const profile = {
   cv: '/phd_cv.pdf',
   email: 'xinboluo693@gmail.com',
   github: '',
-  linkedin: '',
+  linkedin: 'https://www.linkedin.com/in/xinbo-luo-0aa4721a5/',
   biography: [
     'I am a Data Scientist at Sysco, where I develop AI agents, pricing models, and evaluate the impact of pricing interventions and analytics for operations. I received my Master of Electrical and Computer Engineering from Rice University and my Bachelor of Engineering from the University of Liverpool.',
     'My experience spans statistical analysis, machine learning, and AI applications. Previously, I worked on AI browsing and voice agents for healthcare workflows at iClinic AI, as well as natural language processing and time series forecasting in other industry roles.',
