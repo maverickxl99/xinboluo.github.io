@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const links = [['home', 'About'], ['research', 'Research interests'], ['education', 'Education']];
+const links = [['home', 'About'], ['research', 'Research interests'], ['education', 'Education'], ['publications', 'Publications']];
 
 export default function Navigation({ name }) {
   const [active, setActive] = useState(window.location.hash.slice(1) || 'home');

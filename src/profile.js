@@ -18,4 +18,15 @@ export const profile = {
     { institution: 'University of Liverpool', degree: 'B.Eng. in Computer Science and Electronic Engineering', year: '2023' },
     { institution: 'Xi’an Jiaotong-Liverpool University', degree: 'B.Eng. in Computer Science and Technology', year: '2021' },
   ],
+  publications: [
+    {
+      title: 'Merkle tree: A fundamental component of blockchains',
+      authors: ['Liu, H.', 'Luo, X.', 'Liu, H.', 'Xia, X.'],
+      highlightedAuthor: 'Luo, X.',
+      year: 2021,
+      conference: '2021 International Conference on Electronic Information Engineering and Computer Science (EIECS)',
+      publisher: 'IEEE',
+      url: 'https://doi.org/10.1109/EIECS53707.2021.9588047',
+    },
+  ],
 };

@@ -1,5 +1,5 @@
 import { profile } from './profile.js';
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 import Navigation from './components/Navigation.jsx';
 import { ContactLinks } from './components/ProfileSidebar.jsx';
 
@@ -35,6 +35,22 @@ export default function App() {
           <p><strong>{item.degree}, {item.year}</strong></p>
           <p>{item.institution}</p>
         </article>)}</div>
+      </section>
+      <section id="publications" className="section" aria-labelledby="publications-heading">
+        <h2 id="publications-heading">Publications</h2>
+        <div className="publication-list">
+          {profile.publications.map(publication => <article key={publication.url}>
+            <h3><strong>{publication.title}</strong></h3>
+            <p>
+              {publication.authors.map((author, index) => <Fragment key={index}>
+                {index > 0 && (index === publication.authors.length - 1 ? ', & ' : ', ')}
+                {author === publication.highlightedAuthor ? <strong>{author}</strong> : author}
+              </Fragment>)} ({publication.year}).
+            </p>
+            <p><cite>{publication.conference}</cite> · {publication.publisher}</p>
+            <p><a href={publication.url} aria-label={`View publication: ${publication.title}`}>View publication <span aria-hidden="true">↗</span></a></p>
+          </article>)}
+        </div>
       </section>
     </main>
     <footer className="site-footer">© {new Date().getFullYear()} {profile.name}</footer>
